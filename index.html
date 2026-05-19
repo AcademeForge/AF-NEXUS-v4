@@ -1,6 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AcademeForge</title>
+
+  <!-- 👇 1.  CSS  -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="splashScreen">
+  <img src="AF LOGO 1.jpeg" class="splash-img" alt="AcademeForge Logo">
+  <h1>AcademeForge</h1>
+  <p>Learning Intelligence for Ambitious Students</p>
+</div>
+  <main class="app">
+
+    <header class="topbar">
+      <div class="top-row">
+        <div class="brand">
+          <img src="AF LOGO 1.jpeg" class="app-logo" alt="AcademeForge Logo">
+          <div>
+            <h1>AcademeForge</h1>
+            <p>Learning Intelligence for Ambitious Students</p>
+          </div>
+        </div>
+        
+<button class="theme-toggle-btn" onclick="toggleThemeMode()" id="themeToggleBtn">
+  🌙
+</button>
+        
+       <a href="https://academeforge.in/" class="time-box glass">
+  <strong id="time">Official Portal</strong>
+  <span id="date">academeforge.in</span>
+</a>
+        
+      </div>
+
+    </header>
+
+   <section id="home" class="section active">
+
+ <!-- IMAGE BANNER SLIDER -->
+<div class="home-banner-slider glass">
+  <div class="banner-slide active">
+    <img src="banner1.png" alt="AcademeForge premium learning banner">
+  </div>
+
+  <div class="banner-slide"> 
+    <img src="banner2.png" alt="AcademeForge student success banner">
+  </div>
+
+  <div class="banner-slide">
+    <img src="Banner3.png" alt="AcademeForge assessment and community banner">
+  </div>
+
+  <div class="banner-dots">
+    <button class="banner-dot active" onclick="goToBannerSlide(0)" aria-label="Banner 1"></button>
+    <button class="banner-dot" onclick="goToBannerSlide(1)" aria-label="Banner 2"></button>
+    <button class="banner-dot" onclick="goToBannerSlide(2)" aria-label="Banner 3"></button>
+  </div>
+</div>
+     
+    <div class="banner-dots">
+      <button class="banner-dot active" onclick="goToBannerSlide(0)" aria-label="Banner 1"></button>
+      <button class="banner-dot" onclick="goToBannerSlide(1)" aria-label="Banner 2"></button>
+      <button class="banner-dot" onclick="goToBannerSlide(2)" aria-label="Banner 3"></button>
+    </div>
+ 
+
+  <!-- MOVING TEXT BANNER -->
+  <div class="moving-text-banner glass">
+    <div class="moving-text-track">
+      <span>🔔 AcademeForge Nexus is actively expanding with new tests, notes, discussions, and performance tools.</span>
+      <span>🔔 AcademeForge Nexus is actively expanding with new tests, notes, discussions, and performance tools.</span>
+      <span>🔔 AcademeForge Nexus is actively expanding with new tests, notes, discussions, and performance tools.</span>
+      <span>🔔 AcademeForge Nexus is actively expanding with new tests, notes, discussions, and performance tools.</span>
+      <span>🔔 AcademeForge Nexus is actively expanding with new tests, notes, discussions, and performance tools.</span>
+      <span>🔔 AcademeForge Nexus is actively expanding with new tests, notes, discussions, and performance tools.</span>
+    </div>
+  </div>
+
+  <!-- ENTERPRISE LEARNING INTELLIGENCE STRIP -->
+  <section id="afEnterpriseInsightStripV1" class="af-enterprise-insight-strip-v1 glass" aria-label="Learning intelligence overview">
+    <article id="afProgressSnapshotCardV1" class="af-insight-card-v1">
+      <span class="af-insight-kicker-v1">Progress Snapshot</span>
+      <strong>0%</strong>
+      <small>Complete your first lesson to activate weekly progress tracking.</small>
+    </article>
+
+    <article id="afStreakTrackerCardV1" class="af-insight-card-v1">
+      <span class="af-insight-kicker-v1">Learning Streak</span>
+      <strong>0 Days</strong>
+      <small>Study daily to build consistency and unlock streak milestones.</small>
+    </article>
+
+    <article id="afAiTutorCardV1" class="af-insight-card-v1 af-ai-tutor-card-v1">
+      <span class="af-insight-kicker-v1">AI Tutor Readiness</span>
+      <strong>Smart Doubt Support</strong>
+      <small>Ask concept questions, revise weak areas, and prepare faster.</small>
+    </article>
+  </section>
+
+  <!-- QUICK LEARNING ACTIONS -->
+  <section id="afQuickLearningActionsV1" class="af-quick-learning-actions-v1 glass" aria-label="Quick learning actions">
+    <div id="afQuickLearningHeaderV1" class="af-quick-learning-header-v1">
+      <span>Next Best Actions</span>
+      <strong>Build momentum in under 10 minutes</strong>
+    </div>
+
+    <div id="afQuickLearningGridV1" class="af-quick-learning-grid-v1">
+      <button id="afDailyQuizLaunchBtnV1" class="af-quick-action-btn-v1" type="button" onclick="showSection('explore'); loadAFTestPageV1();">
+        <span>⚡</span>
+        <b>Start Daily Quiz</b>
+        <small>Practice with ranked assessments.</small>
+      </button>
+
+      <button id="afResumeCourseBtnV1" class="af-quick-action-btn-v1" type="button" onclick="showSection('studentaf')">
+        <span>▶️</span>
+        <b>Resume Program</b>
+        <small>Continue from your enrolled learning path.</small>
+      </button>
+
+      <button id="afAskTutorBtnV1" class="af-quick-action-btn-v1" type="button" onclick="showSection('community')">
+        <span>🤖</span>
+        <b>Ask the Learning Network</b>
+        <small>Post doubts and receive peer guidance.</small>
+      </button>
+    </div>
+  </section>
+
+       <!-- TOP LOGIN BUTTONS -->
+  <div class="actions home-login-actions">
+    <button class="action-card glass" onclick="showSection('studentaf')">
+      <div class="icon">🎓</div>
+      <div>
+        <h3>Student Workspace</h3>
+        <p>Enter your secure learning dashboard.</p>
+      </div>
+    </button>
+    
+<button class="action-card glass student-profile-card" type="button" onclick="openStudentDashboardCardAf(event)">
+  <div class="icon student-profile-card-icon">👤</div>
+  <div>
+    <h3 id="studentDashboardCardNameAf">Welcome, Learner</h3>
+    <p id="studentDashboardCardSubAf">Sign in to view your profile, batches, and progress.</p>
+  </div>
+</button>
+  
+  </div>
+
+  <!-- EXPLORE + TEAM -->
+<div class="actions home-extra-actions">
+  <button class="action-card glass wide" onclick="showSection('explore'); loadAFTestPageV1();">
+    <div class="icon">✨</div>
+    <div>
+      <h3>Scholar Assessment Arena</h3>
+      <p>Compete in structured tests and track national performance.</p>
+    </div>
+  </button>
+</div>
+
+    <button class="action-card glass wide" onclick="showSection('management')">
+      <div class="icon">🔥</div>
+      <div>
+        <h3>About AcademeForge</h3>
+        <p>Explore the mission, platform vision, and founder story.</p>
+      </div>
+    </button>
+  </div>
+     
+<div class="developer-credit-line">
+  <span>Engineered by Devraj Kumar</span>
+  <small>Built in India for disciplined learners.</small>
+</div>
+</section>
+
+    
+     
+  <!-----------------------  🧪 TEST SECTION --------------------------------------->
+
+<section id="explore" class="section">
+  <div class="panel glass af-test-panel">
+
+    <button class="back-mini" onclick="showSection('home')">← Back</button>
+
+    <!-- LOCKED STATE -->
+    <div id="afTestLockedV1" class="af-test-locked-v1">
+      <div class="af-test-lock-icon-v1">🔒</div>
+
+      <h2>AcademeForge Scholar Assessments</h2>
+
+      <p>
+        Sign in to unlock upcoming assessments, rankings, and personalized performance insights.
+      </p>
+
+      <button class="af-test-login-btn-v1" type="button" onclick="showSection('studentaf')">
+        Sign In to Continue
+      </button>
+    </div>
+
+    <!-- LOGGED IN STATE -->
+    <div id="afTestMainV1" class="af-test-main-v1 af-hidden">
+
+      <div class="af-test-hero-v1">
+        <div class="af-test-hero-icon-v1">🧪</div>
+
+        <div>
+          <span>AF Nexus</span>
+          <h2>AcademeForge Scholar Assessment Hub</h2>
+          <p>
+            Access upcoming assessments, performance insights,
+            and competitive learning opportunities.
+          </p>
+        </div>
+      </div>
+
+      <!-- ENTERPRISE ASSESSMENT READINESS -->
+      <div id="afAssessmentReadinessV1" class="af-assessment-readiness-v1">
+        <div id="afAssessmentReadinessHeaderV1" class="af-assessment-readiness-header-v1">
+          <span>Assessment Readiness</span>
+          <strong>Prepare with measurable focus</strong>
+        </div>
+
+        <div id="afAssessmentReadinessGridV1" class="af-assessment-readiness-grid-v1">
+          <article id="afAccuracyReadinessCardV1" class="af-assessment-metric-card-v1">
+            <span>Accuracy Goal</span>
+            <strong>85%+</strong>
+            <small>Target benchmark for high-performing attempts.</small>
+          </article>
+
+          <article id="afSpeedReadinessCardV1" class="af-assessment-metric-card-v1">
+            <span>Speed Goal</span>
+            <strong>&lt; 60s/Q</strong>
+            <small>Recommended pacing for competitive tests.</small>
+          </article>
+
+          <article id="afRevisionReadinessCardV1" class="af-assessment-metric-card-v1">
+            <span>Revision Priority</span>
+            <strong>Weak Areas</strong>
+            <small>Use ranking data to identify topics needing review.</small>
+          </article>
+        </div>
+      </div>
+
+      <!-- MAIN TEST CONTENT -->
+      <div id="afTestMainContentV1">
+
+        <!-- TOP ACTION BUTTONS -->
+        <div class="af-test-top-actions-v1">
+          <button type="button" onclick="openAFTestDashboardPageV1()">
+            <span>📊</span>
+            <b>Performance Dashboard</b>
+          </button>
+
+          <button type="button" onclick="openAFTestRankingPageV1()">
+            <span>🏆</span>
+            <b>National Leaderboard</b>
+          </button>
+        </div>
+
+        <!-- MINI DASHBOARD CARDS -->
+        <div id="afTestDashboardCardsV1" class="af-test-dashboard-cards-v1">
+          <div class="af-test-mini-card-v1">
+            <span>Latest Rank</span>
+            <strong>--</strong>
+            <small>No assessment attempted yet</small>
+          </div>
+
+          <div class="af-test-mini-card-v1">
+            <span>Cumulative Rank</span>
+            <strong>--</strong>
+            <small>Ranking will appear after your first attempt</small>
+          </div>
+
+          <div class="af-test-mini-card-v1">
+            <span>Avg. Time / Question</span>
+            <strong>--</strong>
+            <small>Timing data will appear after assessment</small>
+          </div>
+        </div>
+
+        <!-- TEST AREA -->
+        <div id="afTestAreaV1" class="af-test-area-v1">
+          <div class="af-test-empty-card-v1">
+            <div class="af-test-empty-icon-v1">📅</div>
+            <h3>Preparing assessment workspace...</h3>
+            <p>Checking active and upcoming assessment windows.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DASHBOARD FULL PAGE -->
+      <div id="afTestDashboardPageV1" class="af-test-sub-page-v1 af-hidden">
+        <div class="af-test-sub-head-v1">
+          <button type="button" onclick="closeAFTestSubPagesV1()">← Back</button>
+          <div>
+            <span class="af-test-kicker-v1">Performance Dashboard</span>
+            <h3>Your Assessment Analytics</h3>
+            <p>Monitor score trends, rank movement, speed, and consistency.</p>
+          </div>
+        </div>
+
+        <div id="afTestHistoryV1" class="af-test-history-v1">
+          <div class="af-test-history-empty-v1">No assessment history is available yet.</div>
+        </div>
+      </div>
+
+      <!-- NATIONAL RANKING FULL PAGE -->
+      <div id="afTestRankingPageV1" class="af-test-sub-page-v1 af-hidden">
+        <div class="af-test-sub-head-v1">
+          <button type="button" onclick="closeAFTestSubPagesV1()">← Back</button>
+          <div>
+            <span class="af-test-kicker-v1">National Leaderboard</span>
+            <h3>Top 10 Scholars</h3>
+            <p>View top performers by score, speed, and consistency.</p>
+          </div>
+        </div>
+
+        <div id="afTestRankingListV1" class="af-test-history-v1">
+          <div class="af-test-history-empty-v1">Leaderboard will populate after eligible assessment attempts.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="developer-credit-line af-test-credit-v1">
+      <span>© 2026 AcademeForge by Devraj Kumar.</span>
+      <small>Built in India for disciplined learners.</small>
+    </div>
+
+  </div>
+</section>
+
 <!-- =========================================================
-  CONNECTED HTML PATCH FOR FINAL JS
-  Add/replace inside <main class="app"> before bottom nav
+  CONNECTED HTML PATCH 
 ========================================================= -->
 
 <!-- ================= STUDENT SECTION ================= -->
