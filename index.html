@@ -1,0 +1,1328 @@
+</head>
+
+<body>
+
+<div id="splashScreen">
+  <img src="AF LOGO 1.jpeg" class="splash-img" alt="AcademeForge Logo">
+  <h1>AcademeForge</h1>
+  <p>Learning Beyond The Classroom</p>
+</div>
+  <main class="app">
+
+    <header class="topbar">
+      <div class="top-row">
+        <div class="brand">
+          <img src="AF LOGO 1.jpeg" class="app-logo" alt="AcademeForge Logo">
+          <div>
+            <h1>AcademeForge</h1>
+            <p>Learning Beyond the Classroom</p>
+          </div>
+        </div>
+        
+<button class="theme-toggle-btn" onclick="toggleThemeMode()" id="themeToggleBtn">
+  🌙
+</button>
+        
+       <a href="https://academeforge.in/" class="time-box glass">
+  <strong id="time">Website</strong>
+  <span id="date">academeforge.in</span>
+</a>
+        
+      </div>
+
+    </header>
+
+   <section id="home" class="section active">
+
+ <!-- IMAGE BANNER SLIDER -->
+<div class="home-banner-slider glass">
+  <div class="banner-slide active">
+    <img src="banner1.png" alt="AcademeForge Banner 1">
+  </div>
+
+  <div class="banner-slide"> 
+    <img src="banner2.png" alt="AcademeForge Banner 2">
+  </div>
+
+  <div class="banner-slide">
+    <img src="Banner3.png" alt="AcademeForge Banner 3">
+  </div>
+
+  <div class="banner-dots">
+    <button class="banner-dot active" onclick="goToBannerSlide(0)" aria-label="Banner 1"></button>
+    <button class="banner-dot" onclick="goToBannerSlide(1)" aria-label="Banner 2"></button>
+    <button class="banner-dot" onclick="goToBannerSlide(2)" aria-label="Banner 3"></button>
+  </div>
+</div>
+     
+    <div class="banner-dots">
+      <button class="banner-dot active" onclick="goToBannerSlide(0)" aria-label="Banner 1"></button>
+      <button class="banner-dot" onclick="goToBannerSlide(1)" aria-label="Banner 2"></button>
+      <button class="banner-dot" onclick="goToBannerSlide(2)" aria-label="Banner 3"></button>
+    </div>
+ 
+
+  <!-- MOVING TEXT BANNER -->
+  <div class="moving-text-banner glass">
+    <div class="moving-text-track">
+      <span>🔔This is Beta version, Contents of AF Nexus is being updated....</span>
+      <span>🔔This is Beta version, Contents of AF Nexus is being updated....</span>
+      <span>🔔This is Beta version, Contents of AF Nexus is being updated....</span>
+      <span>🔔This is Beta version, Contents of AF Nexus is being updated....</span>
+      <span>🔔This is Beta version, Contents of AF Nexus is being updated....</span>
+      <span>🔔This is Beta version, Contents of AF Nexus is being updated....</span>
+    </div>
+  </div>
+
+       <!-- TOP LOGIN BUTTONS -->
+  <div class="actions home-login-actions">
+    <button class="action-card glass" onclick="showSection('studentaf')">
+      <div class="icon">🎓</div>
+      <div>
+        <h3>Student Login</h3>
+        <p>Access your course dashboard.</p>
+      </div>
+    </button>
+    
+<button class="action-card glass student-profile-card" type="button" onclick="openStudentDashboardCardAf(event)">
+  <div class="icon student-profile-card-icon">👤</div>
+  <div>
+    <h3 id="studentDashboardCardNameAf">Hi, Student</h3>
+    <p id="studentDashboardCardSubAf">Login to view profile</p>
+  </div>
+</button>
+  
+  </div>
+
+  <!-- EXPLORE + TEAM -->
+<div class="actions home-extra-actions">
+  <button class="action-card glass wide" onclick="showSection('explore'); loadAFTestPageV1();">
+    <div class="icon">✨</div>
+    <div>
+      <h3>AF Test Arena</h3>
+      <p>Attempt quizzes and see your ranking.</p>
+    </div>
+  </button>
+</div>
+
+    <button class="action-card glass wide" onclick="showSection('management')">
+      <div class="icon">🔥</div>
+      <div>
+        <h3>About Us</h3>
+        <p>Know the story behind AcademeForge.</p>
+      </div>
+    </button>
+  </div>
+     
+<div class="developer-credit-line">
+  <span>Developed by Devraj Kumar</span>
+  <small>Made with ❤️ in India.</small>
+</div>
+</section>
+
+    
+     
+  <!-----------------------  🧪 TEST SECTION --------------------------------------->
+
+<section id="explore" class="section">
+  <div class="panel glass af-test-panel">
+
+    <button class="back-mini" onclick="showSection('home')">← Back</button>
+
+    <!-- LOCKED STATE -->
+    <div id="afTestLockedV1" class="af-test-locked-v1">
+      <div class="af-test-lock-icon-v1">🔒</div>
+
+      <h2>AcademeForge Scholars Tests</h2>
+
+      <p>
+        Oops, looks like you haven't login yet. Login to know about upcoming tests.
+      </p>
+
+      <button class="af-test-login-btn-v1" type="button" onclick="showSection('studentaf')">
+        Login Now
+      </button>
+    </div>
+
+    <!-- LOGGED IN STATE -->
+    <div id="afTestMainV1" class="af-test-main-v1 af-hidden">
+
+      <div class="af-test-hero-v1">
+        <div class="af-test-hero-icon-v1">🧪</div>
+
+        <div>
+          <span>AF Nexus</span>
+          <h2>AcademeForge Scholars Test</h2>
+          <p>
+            Stay updated with upcoming tests, assessments,
+            and student opportunities.
+          </p>
+        </div>
+      </div>
+
+      <!-- MAIN TEST CONTENT -->
+      <div id="afTestMainContentV1">
+
+        <!-- TOP ACTION BUTTONS -->
+        <div class="af-test-top-actions-v1">
+          <button type="button" onclick="openAFTestDashboardPageV1()">
+            <span>📊</span>
+            <b>Your Dashboard</b>
+          </button>
+
+          <button type="button" onclick="openAFTestRankingPageV1()">
+            <span>🏆</span>
+            <b>National Rankings</b>
+          </button>
+        </div>
+
+        <!-- MINI DASHBOARD CARDS -->
+        <div id="afTestDashboardCardsV1" class="af-test-dashboard-cards-v1">
+          <div class="af-test-mini-card-v1">
+            <span>Last Rank</span>
+            <strong>--</strong>
+            <small>No test yet</small>
+          </div>
+
+          <div class="af-test-mini-card-v1">
+            <span>Overall Rank</span>
+            <strong>--</strong>
+            <small>No ranking yet</small>
+          </div>
+
+          <div class="af-test-mini-card-v1">
+            <span>Avg Time / Q</span>
+            <strong>--</strong>
+            <small>No data yet</small>
+          </div>
+        </div>
+
+        <!-- TEST AREA -->
+        <div id="afTestAreaV1" class="af-test-area-v1">
+          <div class="af-test-empty-card-v1">
+            <div class="af-test-empty-icon-v1">📅</div>
+            <h3>Loading test...</h3>
+            <p>Please wait while we check available tests.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DASHBOARD FULL PAGE -->
+      <div id="afTestDashboardPageV1" class="af-test-sub-page-v1 af-hidden">
+        <div class="af-test-sub-head-v1">
+          <button type="button" onclick="closeAFTestSubPagesV1()">← Back</button>
+          <div>
+            <span class="af-test-kicker-v1">Your Dashboard</span>
+            <h3>Your Test Rankings</h3>
+            <p>Track your latest score, rank, speed and overall performance.</p>
+          </div>
+        </div>
+
+        <div id="afTestHistoryV1" class="af-test-history-v1">
+          <div class="af-test-history-empty-v1">No test ranking yet.</div>
+        </div>
+      </div>
+
+      <!-- NATIONAL RANKING FULL PAGE -->
+      <div id="afTestRankingPageV1" class="af-test-sub-page-v1 af-hidden">
+        <div class="af-test-sub-head-v1">
+          <button type="button" onclick="closeAFTestSubPagesV1()">← Back</button>
+          <div>
+            <span class="af-test-kicker-v1">National Rankings</span>
+            <h3>Top 10 Students</h3>
+            <p>See the fastest and highest scoring students.</p>
+          </div>
+        </div>
+
+        <div id="afTestRankingListV1" class="af-test-history-v1">
+          <div class="af-test-history-empty-v1">Top 10 will show after students attempt test.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="developer-credit-line af-test-credit-v1">
+      <span>© 2026 AcademeForge by Devraj Kumar.</span>
+      <small>Made with ❤️ in India.</small>
+    </div>
+
+  </div>
+</section>
+    
+<!-- NEW STUDENT SECTION -->
+
+<section id="studentaf" class="section">
+  <div class="student-wrapaf">
+
+    <div class="student-cardaf" id="studentAuthCardaf">
+      <div class="student-iconaf">🎓</div>
+
+      <h2 class="student-titleaf">Student ID Access</h2>
+
+      <p class="student-subtitleaf">
+        Login with your verified Student ID to access courses, batches, and community features.
+      </p>
+
+      <div class="student-tabsaf">
+        <button
+          type="button"
+          id="loginTabBtnaf"
+          class="student-tabaf active"
+          onclick="switchStudentModeaf('login')"
+        >
+          Login
+        </button>
+
+        <button
+          type="button"
+          id="createTabBtnaf"
+          class="student-tabaf"
+          onclick="switchStudentModeaf('create')"
+        >
+          Create ID
+        </button>
+      </div>
+
+      <!-- LOGIN BOX -->
+      <div id="studentLoginBoxaf" class="student-boxaf">
+        <label class="student-labelaf">Student ID / Phone Number</label>
+        <input
+          id="loginPhoneaf"
+          class="student-inputaf"
+          type="tel"
+          placeholder="Enter your phone number"
+        >
+
+        <label class="student-labelaf">Password</label>
+        <input
+          id="loginPasswordaf"
+          class="student-inputaf"
+          type="password"
+          placeholder="Enter password"
+        >
+
+        <button class="student-main-btnaf" type="button" onclick="loginStudentaf()">
+          Login
+        </button>
+
+        <button class="student-link-btnaf" type="button" onclick="switchStudentModeaf('forgot')">
+          Forgot Password?
+        </button>
+      </div>
+
+      <!-- CREATE ID BOX -->
+      <div id="studentCreateBoxaf" class="student-boxaf" style="display:none;">
+        <label class="student-labelaf">Full Name</label>
+        <input
+          id="createNameaf"
+          class="student-inputaf"
+          type="text"
+          placeholder="Enter your full name"
+        >
+
+        <label class="student-labelaf">Phone Number</label>
+        <input
+          id="createPhoneaf"
+          class="student-inputaf"
+          type="tel"
+          placeholder="Enter phone number"
+        >
+
+        <label class="student-labelaf">Email Address</label>
+        <input
+          id="createEmailaf"
+          class="student-inputaf"
+          type="email"
+          placeholder="Enter email address"
+        >
+
+        <label class="student-labelaf">Create Password</label>
+        <input
+          id="createPasswordaf"
+          class="student-inputaf"
+          type="password"
+          placeholder="Create password"
+        >
+
+    <button class="student-main-btnaf" type="button" onclick="sendCreateOtpaf()">
+  Send Email OTP
+</button>
+
+<div id="createOtpAreaaf" style="display:none; margin-top:14px;">
+  <label class="student-labelaf">Email OTP</label>
+  <input
+    id="createOtpaf"
+    class="student-inputaf"
+    type="text"
+    maxlength="6"
+    placeholder="Enter OTP sent to your email"
+  >
+
+  <button class="student-main-btnaf secondary" type="button" onclick="verifyCreateOtpAndCreateIdaf()">
+    Verify OTP & Create ID
+  </button>
+</div>
+
+        <p class="student-helpaf">
+          Your phone number will be used as your Student ID.
+        </p>
+      </div>
+
+<!-- FORGOT PASSWORD BOX -->
+<div id="studentForgotBoxaf" class="student-boxaf" style="display:none;">
+  <label class="student-labelaf">Student ID / Phone / Email</label>
+  <input
+    id="forgotLoginaf"
+    class="student-inputaf"
+    type="text"
+    placeholder="Enter your Student ID, phone, or email"
+  >
+
+  <button class="student-main-btnaf" type="button" onclick="findStudentForResetaf()">
+    Send Email OTP
+  </button>
+
+  <div id="forgotOtpAreaaf" style="display:none; margin-top:14px;">
+    <label class="student-labelaf">Email OTP</label>
+    <input
+      id="forgotOtpaf"
+      class="student-inputaf"
+      type="text"
+      maxlength="6"
+      placeholder="Enter OTP sent to your email"
+    >
+
+    <button class="student-main-btnaf secondary" type="button" onclick="verifyForgotOtpaf()">
+      Verify OTP
+    </button>
+  </div>
+
+  <div id="resetPasswordAreaaf" style="display:none; margin-top:14px;">
+    <label class="student-labelaf">New Password</label>
+    <input
+      id="newPasswordaf"
+      class="student-inputaf"
+      type="password"
+      placeholder="Create new password"
+    >
+
+    <button class="student-main-btnaf secondary" type="button" onclick="resetStudentPasswordaf()">
+      Reset Password
+    </button>
+  </div>
+
+  <button class="student-link-btnaf" type="button" onclick="switchStudentModeaf('login')">
+    Back to Login
+  </button>
+
+  <p class="student-helpaf">
+    We’ll verify your registered email before allowing password reset.
+  </p>
+</div>
+      <div id="studentMessageaf" class="student-messageaf"></div>
+
+      <div class="student-noteaf">
+        If you face any issue while creating your Student ID, email us at
+        <b>academeforge@gmail.com</b> with your name and WhatsApp number.
+      </div>
+    </div>
+
+   <!-- ==============================
+     STUDENT COURSE DASHBOARD - AF
+     Show after login
+================================ -->
+
+<div class="student-dashboardaf hidden-box" id="courseSelectBox">
+  <div class="student-dash-headaf">
+    <div>
+      <h2>📚 My Courses</h2>
+      <p id="studentWelcomeTextaf">Welcome Student</p>
+    </div>
+
+    <button class="student-logoutaf" type="button" onclick="logoutStudentaf()">
+      Logout
+    </button>
+  </div>
+
+  <p class="student-dash-subaf">
+    Your enrolled programs are ready to explore.
+  </p>
+
+  <div class="course-select-gridaf" id="courseCardsaf"></div>
+</div>
+
+
+<!-- ==============================
+     NO COURSE / MESSAGE AREA - AF
+================================ -->
+
+<div class="student-dashboardaf hidden-box" id="noCourseBoxaf">
+  <div class="no-course-cardaf">
+    <div class="no-course-iconaf">😬</div>
+    <h2>Oops!</h2>
+    <p>You are not enrolled in any batch.</p>
+    <p>Please enroll from the Batch section.</p>
+
+    <button class="student-logoutaf" type="button" onclick="logoutStudentaf()">
+      Logout
+    </button>
+  </div>
+</div>
+
+
+<!-- ==============================
+     COURSE DETAILS - AF
+================================ -->
+
+<div class="student-dashboardaf hidden-box" id="courseDetailsBoxaf">
+  <button class="back-miniaf" type="button" onclick="backToCoursesaf()">
+    ← Back to Courses
+  </button>
+
+  <div class="course-detail-headaf">
+    <div class="course-detail-iconaf" id="courseDetailIconaf">📘</div>
+
+    <div>
+      <h2 id="courseTitleaf">Course Name</h2>
+      <p id="courseIntroaf">Course intro will appear here.</p>
+    </div>
+  </div>
+
+  <div class="course-info-boxaf">
+    <h3>📌 Course Details</h3>
+    <p id="courseDetailsaf"></p>
+  </div>
+
+  <div class="course-info-boxaf">
+    <h3>🧾 Course Syllabus</h3>
+    <ul id="courseSyllabusaf"></ul>
+  </div>
+
+  <div class="course-info-boxaf">
+    <h3>🏫 Facilities</h3>
+    <ul id="courseFacilitiesaf"></ul>
+  </div>
+
+  <button class="student-main-btnaf" type="button" onclick="startLearningaf()">
+    Continue Learning
+  </button>
+</div>
+
+
+<!-- ==============================
+     LEARNING CHOICE - AF
+================================ -->
+
+<div class="student-dashboardaf hidden-box" id="learningBoxaf">
+  <button class="back-miniaf" type="button" onclick="backToCourseDetailsaf()">
+    ← Back to Course
+  </button>
+
+  <h2 id="learningTitleaf">Start Learning</h2>
+  <p class="student-dash-subaf">Select what you want to access.</p>
+
+  <div class="learning-choiceaf">
+    <button class="learning-btnaf" type="button" onclick="openLearningModeaf('lectures')">
+      <span>🎥</span>
+      <strong>Lectures</strong>
+      <small>Chapter-wise video lecture list</small>
+    </button>
+
+    <button class="learning-btnaf" type="button" onclick="openLearningModeaf('notes')">
+      <span>📝</span>
+      <strong>Notes</strong>
+      <small>Chapter-wise study notes list</small>
+    </button>
+  </div>
+</div>
+
+
+<!-- ==============================
+     CHAPTER LIST - AF
+================================ -->
+
+<div class="student-dashboardaf hidden-box" id="chapterBoxaf">
+  <button class="back-miniaf" type="button" onclick="backToLearningaf()">
+    ← Back
+  </button>
+
+  <h2 id="chapterModeTitleaf">Lectures</h2>
+  <p class="student-dash-subaf">Select a chapter to continue.</p>
+
+  <div class="chapter-listaf" id="chapterListaf"></div>
+</div>
+
+
+<!-- ==============================
+     CONTENT LIST - AF
+================================ -->
+
+<div class="student-dashboardaf hidden-box" id="contentBoxaf">
+  <button class="back-miniaf" type="button" onclick="backToChaptersaf()">
+    ← Back to Chapters
+  </button>
+
+  <h2 id="contentTitleaf">Chapter Content</h2>
+  <p class="student-dash-subaf" id="contentSubtitleaf">
+    Select and study one by one.
+  </p>
+
+  <div class="content-listaf" id="contentListaf"></div>
+</div>
+
+
+    <!-- ==============================
+     Student dashboard- AF
+================================ -->
+   </section> 
+
+<section id="studentDashboardAf" class="section">
+  <div class="af-profile-wrap">
+
+    <div class="af-profile-hero glass">
+      <button class="af-back-btn" type="button" onclick="showSection('home')">← Back</button>
+
+      <div class="af-avatar" id="afProfileAvatar">S</div>
+
+      <div class="af-hero-text">
+        <h2 id="afProfileHeroName">Student</h2>
+        <p id="afProfileHeroSub">View and manage your dashboard</p>
+      </div>
+    </div>
+
+    <div class="af-panel glass">
+      <div class="af-panel-head">
+        <div>
+          <h3>Your Details</h3>
+          <p>Name, email and phone number</p>
+        </div>
+
+        <button class="af-mini-btn" type="button" onclick="openYourDetailsEditAf()">AF Nexus</button>
+      </div>
+
+      <div class="af-detail-grid">
+        <div class="af-detail-row">
+          <span>Name</span>
+          <strong id="afInfoName">-</strong>
+        </div>
+
+        <div class="af-detail-row">
+          <span>Email</span>
+          <strong id="afInfoEmail">-</strong>
+        </div>
+
+        <div class="af-detail-row">
+          <span>Phone Number</span>
+          <strong id="afInfoMobile">-</strong>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="af-panel glass">
+      <div class="af-panel-head">
+        <div>
+          <h3>Batch Enrolled In</h3>
+          <p>Your enrolled courses or batches</p>
+        </div>
+      </div>
+
+      <div id="afBatchList" class="af-batch-list">
+        <p class="af-empty">No enrolled batch found.</p>
+      </div>
+    </div>
+<!-- Additional Setting Panel -->
+<div class="af-panel glass af-additional-settings-panel">
+  <button
+    id="afAdditionalSettingsBtnNew"
+    class="af-settings-main-btn"
+    type="button"
+    onclick="toggleAfAdditionalSettingsNew()"
+  >
+    <span class="af-settings-icon-new">⚙️</span>
+
+    <span class="af-settings-text-new">
+      <strong>Additional Setting</strong>
+      <small>Account safety and sensitive actions</small>
+    </span>
+
+    <span id="afAdditionalSettingsArrowNew" class="af-settings-arrow-new">⌄</span>
+  </button>
+
+  <div id="afAdditionalSettingsBodyNew" class="af-settings-body-new af-hidden">
+    <button
+      id="afDeleteAccountInfoBtnNew"
+      class="af-delete-info-btn-new"
+      type="button"
+      onclick="showAfDeleteAccountInfoNew()"
+    >
+      <span>Delete Account</span>
+      <small>Permanent account removal request</small>
+    </button>
+
+    <div id="afDeleteAccountInfoBoxNew" class="af-delete-info-box-new af-hidden">
+      <div class="af-delete-info-top-new">
+        <div class="af-delete-info-icon-new">!</div>
+        <div>
+          <h4>Account Deletion Request</h4>
+          <p>Manual verification required</p>
+        </div>
+      </div>
+
+      <p class="af-delete-info-message-new">
+        Oops, we are sad that you are leaving AcademeForge.
+      </p>
+
+      <p class="af-delete-info-message-new">
+        To request account deletion, please mail us at
+        <strong>noreply.academeforge@gmail.com</strong>
+        with your registered phone number, registered email, and full name.
+      </p>
+
+      <div class="af-delete-warning-new">
+        <strong>Important:</strong>
+        This is a permanent action. Once your account is deleted, you will not be able to create a new account with the same phone number or email.
+      </div>
+
+      <a
+        class="af-mail-delete-btn-new"
+        href=""
+      >
+        Mail Deletion Request
+      </a>
+    </div>
+  </div>
+</div>
+</section>
+    
+    <!-- ==============================
+     BATCH PURCHASES - AF
+================================ -->
+    
+ <section id="batchaf" class="section">
+    <div class="batch-wrapaf">
+      <div class="batch-pageaf" id="batchListBoxaf">
+        <div class="batch-topbaraf">
+          <div>
+            <h2>All Batches</h2>
+            <p id="batchCountTextaf">5 batches available</p>
+          </div>
+        </div>
+
+        <div class="batch-search-boxaf">
+          <span>🔍</span>
+          <input id="batchSearchInputaf" type="text" placeholder="Search for batches" oninput="filterBatchesaf()">
+        </div>
+
+        <div class="batch-gridaf" id="batchCardsaf"></div>
+      </div>
+
+      <div class="batch-pageaf hidden-box" id="batchDetailsBoxaf">
+        <button class="batch-backaf" type="button" onclick="backToBatchListaf()">← Back to Batches</button>
+
+        <div class="batch-detail-cardaf">
+          <img id="batchDetailImageaf" src="" alt="Batch Image" class="batch-detail-imgaf">
+
+          <div class="batch-detail-bodyaf">
+            <div class="batch-detail-headrowaf">
+              <div>
+                <p class="batch-categoryaf" id="batchDetailCategoryaf">Target</p>
+                <h2 id="batchDetailTitleaf">Batch Name</h2>
+              </div>
+              <span class="batch-languageaf" id="batchDetailLanguageaf">HINGLISH</span>
+            </div>
+
+            <p class="batch-detail-descaf" id="batchDetailDescaf">Batch description will appear here.</p>
+
+            <div class="batch-price-rowaf">
+              <strong id="batchDetailPriceaf">₹499</strong>
+              <del id="batchDetailOldPriceaf">₹999</del>
+              <span id="batchDetailOffaf">51% OFF</span>
+            </div>
+
+            <button id="batchDetailBuyBtnaf" class="batch-buy-mainaf" type="button" onclick="buySelectedBatchaf()">Buy Now</button>
+          </div>
+        </div>
+
+        <div class="batch-info-boxaf">
+          <h3>📌 What you will learn</h3>
+          <ul id="batchLearnListaf"></ul>
+        </div>
+
+        <div class="batch-info-boxaf">
+          <h3>🏫 Batch Facilities</h3>
+          <ul id="batchFacilityListaf"></ul>
+        </div>
+
+        <div class="batch-info-boxaf">
+          <h3>🧾 Batch Details</h3>
+          <p id="batchFullDetailsaf"></p>
+        </div>
+      </div>
+      
+      <div id="afToastWrap" class="af-toast-wrap"></div>
+    </div>
+  </section>
+    
+  <!-- ==============================
+     AF NEXUS COMMUNITY V2
+================================ -->
+<section id="community" class="section">
+  <div class="af-nexus-v2-shell glass">
+
+    <!-- LOCKED SCREEN -->
+    <div id="afNexusLockedV2" class="af-nexus-locked-v2 af-hidden">
+      <div class="af-nexus-locked-card-v2">
+        <div class="af-nexus-lock-icon-v2">🔒</div>
+
+        <div>
+          <h2>Community Locked</h2>
+          <p>
+            Oops, you have not logged in yet. Login to access Community tab
+            and interact with fellow learners.
+          </p>
+        </div>
+
+        <button
+          class="af-nexus-login-btn-v2"
+          type="button"
+          onclick="showSection('studentaf')"
+        >
+          Login to Continue
+        </button>
+      </div>
+    </div>
+
+    <!-- MAIN COMMUNITY AREA -->
+    <div id="afNexusMainV2" class="af-nexus-main-v2">
+
+      <!-- TOP HEADER -->
+      <div class="af-nexus-header-v2">
+        <div class="af-nexus-title-wrap-v2">
+          <div class="af-nexus-logo-v2">💬</div>
+
+          <div>
+            <h2>AF Nexus</h2>
+            <p>Connect, discuss & grow with fellow learners.</p>
+          </div>
+        </div>
+
+        <button
+          id="afNexusMyBtnV2"
+          class="af-nexus-my-btn-v2"
+          type="button"
+          onclick="openAfMyNexusV2()"
+        >
+          My Nexus Posts
+        </button>
+      </div>
+
+      <!-- USER MINI BAR -->
+      <div class="af-nexus-userbar-v2">
+        <div>
+          <span>Posting as</span>
+          <strong id="afNexusStudentNameV2">Student</strong>
+        </div>
+
+        <small id="afNexusStudentMetaV2">Community member</small>
+      </div>
+
+      <!-- FEED CONTROLS -->
+      <div class="af-nexus-controls-v2">
+        <button
+          id="afNexusRelevantBtnV2"
+          class="af-nexus-filter-btn-v2 active"
+          type="button"
+          onclick="setAfNexusFeedModeV2('relevant')"
+        >
+          Most Relevant
+        </button>
+
+        <button
+          id="afNexusRecentBtnV2"
+          class="af-nexus-filter-btn-v2"
+          type="button"
+          onclick="setAfNexusFeedModeV2('recent')"
+        >
+          Recent Post
+        </button>
+      </div>
+
+      <!-- FEED AREA -->
+      <div id="afNexusFeedViewV2" class="af-nexus-feed-view-v2">
+        <div class="af-nexus-section-head-v2">
+          <div>
+            <h3>Community Posts</h3>
+            <p>Latest discussions from AcademeForge learners.</p>
+          </div>
+
+          <button
+            class="af-nexus-refresh-btn-v2"
+            type="button"
+            onclick="loadAfNexusPostsV2(false)"
+          >
+            Refresh
+          </button>
+        </div>
+
+        <div id="afNexusPostsListV2" class="af-nexus-posts-list-v2">
+          <div class="af-nexus-loading-v2">
+            Loading posts...
+          </div>
+        </div>
+      </div>
+
+      <!-- MY NEXUS AREA -->
+      <div id="afMyNexusViewV2" class="af-my-nexus-view-v2 af-hidden">
+        <div class="af-nexus-section-head-v2">
+          <div>
+            <h3>My Nexus</h3>
+            <p>All posts you have shared in your learning journey.</p>
+          </div>
+
+          <button
+            class="af-nexus-refresh-btn-v2"
+            type="button"
+            onclick="closeAfMyNexusV2()"
+          >
+            Back
+          </button>
+        </div>
+
+        <div id="afMyNexusPostsListV2" class="af-nexus-posts-list-v2">
+          <div class="af-nexus-loading-v2">
+            Loading your posts...
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FLOATING WRITE POST BUTTON -->
+    <button
+      id="afNexusWriteBtnV2"
+      class="af-nexus-write-btn-v2"
+      type="button"
+      onclick="openAfNexusComposerV2()"
+      aria-label="Write post"
+    >
+      ✍️
+    </button>
+
+    <!-- POST COMPOSER MODAL -->
+    <div id="afNexusComposerOverlayV2" class="af-nexus-modal-overlay-v2 af-hidden">
+      <div class="af-nexus-composer-card-v2">
+
+        <div class="af-nexus-modal-head-v2">
+          <div>
+            <h3>Create Post</h3>
+            <p>Text-only post. Maximum 80 words.</p>
+          </div>
+
+          <button
+            type="button"
+            onclick="closeAfNexusComposerV2()"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+
+        <textarea
+          id="afNexusPostInputV2"
+          rows="7"
+          placeholder="Write something helpful, thoughtful, or interesting..."
+          oninput="handleAfNexusPostTypingV2()"
+        ></textarea>
+
+        <div class="af-nexus-composer-foot-v2">
+          <span id="afNexusWordCountV2">0 / 80 words</span>
+
+          <button
+            id="afNexusSubmitPostBtnV2"
+            type="button"
+            onclick="createAfNexusPostV2()"
+          >
+            Post
+          </button>
+        </div>
+
+        <p id="afNexusWordLimitWarningV2" class="af-nexus-word-warning-v2 af-hidden">
+          Word limit exceeded. Please keep your post within 80 words.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- COMMENTS / REPLIES DRAWER -->
+    <div id="afNexusCommentsOverlayV2" class="af-nexus-modal-overlay-v2 af-hidden">
+      <div class="af-nexus-comments-card-v2">
+
+        <div class="af-nexus-modal-head-v2">
+          <div>
+            <h3>Comments</h3>
+            <p id="afNexusCommentPostTitleV2">Join the discussion</p>
+          </div>
+
+          <button
+            type="button"
+            onclick="closeAfNexusCommentsV2()"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+
+        <div id="afNexusCommentsListV2" class="af-nexus-comments-list-v2">
+          <div class="af-nexus-loading-v2">
+            Loading comments...
+          </div>
+        </div>
+
+        <!-- COMMENT INPUT -->
+        <div class="af-nexus-comment-input-box-v2">
+          <textarea
+            id="afNexusCommentInputV2"
+            rows="3"
+            placeholder="Write a comment..."
+            oninput="handleAfNexusCommentTypingV2()"
+          ></textarea>
+
+          <div class="af-nexus-comment-input-foot-v2">
+            <span id="afNexusCommentWordCountV2">0 / 80 words</span>
+
+            <button
+              id="afNexusSubmitCommentBtnV2"
+              type="button"
+              onclick="createAfNexusCommentV2()"
+            >
+              Comment
+            </button>
+          </div>
+
+          <p id="afNexusCommentWordWarningV2" class="af-nexus-word-warning-v2 af-hidden">
+            Word limit exceeded. Please keep your comment within 80 words.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- REPLY MODAL -->
+    <div id="afNexusReplyOverlayV2" class="af-nexus-modal-overlay-v2 af-hidden">
+      <div class="af-nexus-reply-card-v2">
+
+        <div class="af-nexus-modal-head-v2">
+          <div>
+            <h3>Reply</h3>
+            <p id="afNexusReplyTargetTextV2">Reply to comment</p>
+          </div>
+
+          <button
+            type="button"
+            onclick="closeAfNexusReplyV2()"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+
+        <textarea
+          id="afNexusReplyInputV2"
+          rows="4"
+          placeholder="Write your reply..."
+          oninput="handleAfNexusReplyTypingV2()"
+        ></textarea>
+
+        <div class="af-nexus-composer-foot-v2">
+          <span id="afNexusReplyWordCountV2">0 / 80 words</span>
+
+          <button
+            id="afNexusSubmitReplyBtnV2"
+            type="button"
+            onclick="createAfNexusReplyV2()"
+          >
+            Reply
+          </button>
+        </div>
+
+        <p id="afNexusReplyWordWarningV2" class="af-nexus-word-warning-v2 af-hidden">
+          Word limit exceeded. Please keep your reply within 80 words.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- ACTION MENU OVERLAY -->
+    <div id="afNexusMenuOverlayV2" class="af-nexus-menu-overlay-v2 af-hidden" onclick="closeAfNexusMenuV2()">
+      <div class="af-nexus-menu-card-v2" onclick="event.stopPropagation()">
+        <button
+          id="afNexusDeleteActionBtnV2"
+          type="button"
+        >
+          Delete
+        </button>
+
+        <button
+          type="button"
+          onclick="closeAfNexusMenuV2()"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+      <!-----------------------     N        ---------------------------------------> 
+  <!-----------------------   NOTIFICATION SECTION  --------------------------------------->    
+    
+<section id="notifications" class="section">
+  <div class="panel glass">
+    <button class="back-mini" onclick="showSection('home')">← Back</button>
+
+    <h2>🔔 Notifications</h2>
+    <p>Latest lectures, batch updates, notes, and important announcements.</p>
+
+    <div id="notificationsList" class="notifications-list">
+      <div class="notification-empty">No notifications yet.</div>
+    </div>
+
+    <div class="developer-credit-line notification-credit">
+      <span>© 2026 AcademeForge by Devraj Kumar.</span>
+      <small>Made with ❤️ in India.</small>
+    </div>
+  </div>
+</section>
+
+<!-----------------------  ℹ️ ABOUT US SECTION --------------------------------------->
+
+<section id="management" class="section">
+  <div class="panel glass about-af-panel">
+
+    <button class="back-mini" onclick="showSection('home')">← Back</button>
+
+    <!-- HERO -->
+    <div class="about-af-hero-pro">
+      <div class="about-af-hero-badge">AF</div>
+
+      <div class="about-af-hero-content">
+        <span class="about-af-kicker">About AcademeForge</span>
+        <h2>Learning Beyond the Classroom</h2>
+        <p>
+          AcademeForge is built as a modern learning space where students can access
+          courses, batches, updates, community, and study tools in one simple app.
+        </p>
+
+        <div class="about-af-mini-stats">
+          <div>
+            <strong>Practical</strong>
+            <span>Learning</span>
+          </div>
+          <div>
+            <strong>Student</strong>
+            <span>Focused</span>
+          </div>
+          <div>
+            <strong>Mobile</strong>
+            <span>First</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="about-af-section-title">
+      <span>01</span>
+      <div>
+        <h3>Our Beginning</h3>
+        <p>How AcademeForge started and what it is building.</p>
+      </div>
+    </div>
+
+    <div class="about-af-timeline">
+      <div class="about-af-timeline-dot"></div>
+      <div class="about-af-timeline-card">
+        <small>Started with a vision</small>
+        <h3>When AcademeForge Started</h3>
+        <p>
+          AcademeForge was started with the vision of helping students learn beyond
+          classroom limits through practical courses, digital batches, lectures,
+          notes, notifications, and student-friendly learning tools.
+        </p>
+        <button type="button" class="about-af-soft-btn">10 january 2024</button>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE INFO CARDS -->
+    <div class="about-af-section-title">
+      <span>02</span>
+      <div>
+        <h3>What We Build</h3>
+        <p>Tap-friendly learning features inside AcademeForge.</p>
+      </div>
+    </div>
+
+    <div class="about-af-feature-grid">
+
+      <div class="about-af-feature-card">
+        <div class="about-af-feature-icon">🎯</div>
+        <h3>Mission</h3>
+        <p>
+          To make practical learning simple, organized, and accessible for students.
+        </p>
+      </div>
+
+      <div class="about-af-feature-card">
+        <div class="about-af-feature-icon">🚀</div>
+        <h3>Vision</h3>
+        <p>
+          To build a smart learning ecosystem where students can grow with confidence.
+        </p>
+      </div>
+
+      <div class="about-af-feature-card">
+        <div class="about-af-feature-icon">📚</div>
+        <h3>Learning System</h3>
+        <p>
+          Courses, batches, lectures, notes, notifications, and dashboard access.
+        </p>
+      </div>
+
+      <div class="about-af-feature-card">
+        <div class="about-af-feature-icon">💬</div>
+        <h3>Community</h3>
+        <p>
+          A space for learners to connect, discuss, reply, and grow together.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- FOUNDER PROFILE -->
+    <div class="about-af-section-title">
+      <span>03</span>
+      <div>
+        <h3>Founder Profile</h3>
+        <p>The person behind AcademeForge.</p>
+      </div>
+    </div>
+
+    <div class="about-af-founder-pro-card">
+
+      <div class="about-af-founder-cover"></div>
+
+      <div class="about-af-founder-main">
+        <img
+          src="founder-profile.jpeg"
+          alt="Founder Devraj Kumar"
+          class="about-af-founder-img"
+        >
+
+        <div class="about-af-founder-text">
+          <span class="about-af-kicker">Founder & Developer</span>
+          <h3>Devraj Kumar</h3>
+          <p>
+            Devraj Kumar is the Founder of AcademeForge and the creator of the
+            AcademeForge app experience. The platform idea, app interface, student
+            dashboard, learning system, community features, and product development
+            are credited to him.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-af-founder-tags">
+        <span>Founder</span>
+        <span>App Development</span>
+        <span>Product Direction</span>
+        <span>Student Experience</span>
+         <span>CEO</span>
+         <span>CFO</span>
+      </div>
+
+    </div>
+
+    <!-- VALUES -->
+    <div class="about-af-section-title">
+      <span>04</span>
+      <div>
+        <h3>Our Focus</h3>
+        <p>What AcademeForge cares about.</p>
+      </div>
+    </div>
+
+    <div class="about-af-values">
+      <div>
+        <strong>Simple UI</strong>
+        <span>Easy for students to use daily.</span>
+      </div>
+
+      <div>
+        <strong>Fast Access</strong>
+        <span>Courses, batches, and updates in one place.</span>
+      </div>
+
+      <div>
+        <strong>Practical Skills</strong>
+        <span>Learning that connects with real work.</span>
+      </div>
+    </div>
+
+    <!-- CREDIT -->
+    <div class="about-af-credit-pro">
+      <div>
+        <h3>Credits</h3>
+        <p>
+          AcademeForge, its app interface, student dashboard, community system,
+          learning platform structure, and development work are credited to Founder
+          Devraj Kumar.
+        </p>
+      </div>
+    </div>
+
+    <div class="developer-credit-line about-af-footer">
+      <span>© 2026 AcademeForge by Devraj Kumar.</span>
+      <small>Made with ❤️ in India.</small>
+    </div>
+
+  </div>
+</section>
+<!-----------------------  NAV BUTTONS --------------------------------------->
+
+<nav class="bottom-nav glass">
+  <button class="nav-btn active" data-section="home" onclick="showSection('home')">
+    <b>🏠</b>
+    Home
+  </button>
+
+  <button class="nav-btn" data-section="studentaf" onclick="showSection('studentaf')">
+    <b>🎓</b>
+    Student
+  </button>
+
+<button class="nav-btn" data-section="batchaf" onclick="showSection('batchaf'); openBatchSectionaf();">
+  <b>📚</b>
+  Batches
+</button>
+  
+  <button class="nav-btn" data-section="community" onclick="showSection('community')">
+    <b>💬</b>
+    Community
+  </button>
+
+  <button class="nav-btn" data-section="notifications" onclick="showSection('notifications')">
+    <b class="nav-notify-wrap">🔔</b>
+    <span>Notify</span>
+  </button>
+</nav>
+
+  </main>
+
+  <div class="toast" id="toast">
+  <strong>Notification</strong>
+  <p>Message</p>
+</div>
+  
